@@ -95,28 +95,39 @@ std::string function_9_2 (int girth_of_head)
     }
 }
 
-int function_9_3 (int N)
+std::string function_9_3 (int N)
 {
-    int bit_of_N = (N >> 10) & 1;
-    if (bit_of_N == 0)
+    try
     {
-        int amount = 0;
-        while ((N & 1) == 0)
+        if (N < 0 || N > 8999)
+            throw "Error: incorrect input"
+        int bit_of_N = (N >> 10) & 1;
+        if (bit_of_N == 0)
         {
-            amount++;
-            N >>= 1;
-        }
-        return amount;
-        }
-    else
-    {
-        int amount = 0;
-        while (N != 0)
-        {
-            if (N & 1)
+            int amount = 0;
+            while ((N & 1) == 0)
+            {
                 amount++;
-            N >>= 1;
+                N >>= 1;
+            }
+            std::string result = "Кількість двійкових нулів: " + std::to_string(amount);
+            return result;
+            }
+        else
+        {
+            int amount = 0;
+            while (N != 0)
+            {
+                if (N & 1)
+                    amount++;
+                N >>= 1;
+            }
+            std::string result = "Кількість двійкових одиниць: " + std::to_string(amount);
+            return result;
         }
-        return amount;
+    }
+    catch (char *const result)
+    {
+        return result
     }
 }
