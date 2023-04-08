@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1680806180 source:c:\users\user\documents\testdriver\main.cpp
+	<iostream>
+	"ModulesTkachenko.h"
+	<Windows.h>
+	<iomanip>
+
+1680797054 d:\Леха КИСМ\БМТП\2 семестр\Лабы\tkachenko-oleksii-kb222\lab08\prj\modulestkachenko.h
+
