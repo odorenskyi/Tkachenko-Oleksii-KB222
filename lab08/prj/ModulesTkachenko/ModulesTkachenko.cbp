@@ -34,6 +34,14 @@
 				</Linker>
 			</Target>
 		</Build>
+		<Compiler>
+			<Add directory="../ModulesTkachenko" />
+		</Compiler>
+		<Linker>
+			<Add library="bin/Debug/libModulesTkachenko.a" />
+			<Add directory="bin/Debug" />
+		</Linker>
+		<Unit filename="bin/Debug/libModulesTkachenko.a" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
