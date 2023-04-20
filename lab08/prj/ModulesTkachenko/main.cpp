@@ -124,3 +124,74 @@ std::string function_9_3 (int N)
         return result;
     }
 }
+
+void function_10_1()
+{
+    fstream output;
+    output.open("C:\\Users\\User\\Documents\\лаб10\\output.txt", ios_base::out);
+    output << "Олексій Ткаченко, ЦНТУ, Кропивницький, Україна, 2023" << endl;
+
+    int random_number;
+    srand(time(NULL));
+    random_number = rand() % 100 + 10;
+    output << random_number << endl;
+
+    fstream input;
+    input.open("C:\\Users\\User\\Documents\\лаб10\\input.txt", ios_base::in);
+
+    string line;
+    string original_text [5] =
+    {
+        "Як парость виноградної лози, плекайте мову.",
+        "Пильно й ненастанно політь бур'ян.",
+        "Чистіша від сльози вона хай буде.",
+        "Вірно і слухняно нехай вона щоразу служить вам,",
+        "Хоч і живе своїм живим життям."
+    };
+    int i = 0;
+    while (getline(input, line))
+    {
+        if(line == original_text[i])
+        {
+            if (i == 4)
+                output << "Пунктуаційних помилок немає" << endl;
+
+        }
+        else
+        {
+            if (i == 4)
+                output << "Пунктуаційні помилки є" << endl;
+        }
+        i += 1;
+    }
+    input.close();
+    output.close();
+}
+
+void function_10_2()
+{
+    fstream f;
+    f.open("C:\\Users\\User\\Documents\\лаб10\\input.txt", ios_base::app);
+    f << "\nABCDEFGHIJKLMNOPQRSTUVWXYZ\n";
+
+    time_t rawtime;
+    time(&rawtime);
+    f << ctime(&rawtime);
+    f.close();
+}
+
+void function_10_3(float x, float y, float z, int b)
+{
+    fstream f;
+    f.open("C:\\Users\\User\\Documents\\лаб10\\output.txt", ios_base::app);
+    f << s_calculation(x,y,z) << endl;
+    for (int i = 31; i >= 0; i--)
+    {
+        if (b & (1 << i))
+            f << "1";
+        else
+            f << "0";
+    }
+    f << endl;
+    f.close();
+}
