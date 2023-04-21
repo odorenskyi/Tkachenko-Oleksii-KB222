@@ -31,7 +31,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="../../../lab08/prj" />
 		</Compiler>
+		<Linker>
+			<Add library="../../../lab08/prj/ModulesTkachenko/bin/Debug/libModulesTkachenko.a" />
+			<Add directory="../../../lab08/prj/ModulesTkachenko/bin/Debug" />
+		</Linker>
+		<Unit filename="../../../lab08/prj/ModulesTkachenko.h" />
+		<Unit filename="../../../lab08/prj/ModulesTkachenko/bin/Debug/libModulesTkachenko.a" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
