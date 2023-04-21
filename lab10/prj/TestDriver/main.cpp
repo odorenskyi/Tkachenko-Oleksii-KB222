@@ -10,9 +10,9 @@ int main() {
    setlocale(LC_ALL, "ukr");
     function_10_1();
     fstream output;
-    output.open("C:\\Users\\User\\Documents\\лаб10\\output.txt", ios_base::in);
+    output.open("D:\\Леха КИСМ\\БМТП\\2 семестр\\Лабы\\Tkachenko-Oleksii-KB222\\lab10\\prj\\output.txt", ios_base::in);
     fstream input;
-    input.open("C:\\Users\\User\\Documents\\лаб10\\input.txt", ios_base::in);
+    input.open("D:\\Леха КИСМ\\БМТП\\2 семестр\\Лабы\\Tkachenko-Oleksii-KB222\\lab10\\prj\\input.txt", ios_base::in);
 
     string line;
     int number;
@@ -80,7 +80,7 @@ int main() {
     output.close();
 
     function_10_2();
-    input.open("C:\\Users\\User\\Documents\\лаб10\\input.txt", ios_base::in);
+    input.open("D:\\Леха КИСМ\\БМТП\\2 семестр\\Лабы\\Tkachenko-Oleksii-KB222\\lab10\\prj\\input.txt", ios_base::in);
     string time1;
     time_t rawtime;
     time(&rawtime);
@@ -103,7 +103,7 @@ int main() {
     input.close();
 
     function_10_3(1, 2, 5, 6);
-    output.open("C:\\Users\\User\\Documents\\лаб10\\output.txt", ios_base::in);
+    output.open("D:\\Леха КИСМ\\БМТП\\2 семестр\\Лабы\\Tkachenko-Oleksii-KB222\\lab10\\prj\\output.txt", ios_base::in);
     string text [2] = {"-1262.22", "00000000000000000000000000000110"};
     i = 0;
     j = 0;
