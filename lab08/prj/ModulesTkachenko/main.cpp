@@ -12,6 +12,8 @@
 #define _USE_MATH_DEFINES
 #include <math.h>
 #include <iostream>
+#include <fstream>
+#include <ctime>
 
 float s_calculation(float x, float y, float z)
 {
@@ -128,7 +130,7 @@ std::string function_9_3 (int N)
 void function_10_1()
 {
     fstream output;
-    output.open("C:\\Users\\User\\Documents\\лаб10\\output.txt", ios_base::out);
+    output.open("D:\\Леха КИСМ\\БМТП\\2 семестр\\Лабы\\Tkachenko-Oleksii-KB222\\lab10\\prj\\output.txt", ios_base::out);
     output << "Олексій Ткаченко, ЦНТУ, Кропивницький, Україна, 2023" << endl;
 
     int random_number;
@@ -137,7 +139,7 @@ void function_10_1()
     output << random_number << endl;
 
     fstream input;
-    input.open("C:\\Users\\User\\Documents\\лаб10\\input.txt", ios_base::in);
+    input.open("D:\\Леха КИСМ\\БМТП\\2 семестр\\Лабы\\Tkachenko-Oleksii-KB222\\lab10\\prj\\input.txt", ios_base::in);
 
     string line;
     string original_text [5] =
@@ -149,17 +151,16 @@ void function_10_1()
         "Хоч і живе своїм живим життям."
     };
     int i = 0;
+    int j = 0;
     while (getline(input, line))
     {
         if(line == original_text[i])
+            j += 1;
+        if (i == 4)
         {
-            if (i == 4)
+            if (j == 5)
                 output << "Пунктуаційних помилок немає" << endl;
-
-        }
-        else
-        {
-            if (i == 4)
+            else
                 output << "Пунктуаційні помилки є" << endl;
         }
         i += 1;
@@ -171,7 +172,7 @@ void function_10_1()
 void function_10_2()
 {
     fstream f;
-    f.open("C:\\Users\\User\\Documents\\лаб10\\input.txt", ios_base::app);
+    f.open("D:\\Леха КИСМ\\БМТП\\2 семестр\\Лабы\\Tkachenko-Oleksii-KB222\\lab10\\prj\\input.txt", ios_base::app);
     f << "\nABCDEFGHIJKLMNOPQRSTUVWXYZ\n";
 
     time_t rawtime;
@@ -183,7 +184,7 @@ void function_10_2()
 void function_10_3(float x, float y, float z, int b)
 {
     fstream f;
-    f.open("C:\\Users\\User\\Documents\\лаб10\\output.txt", ios_base::app);
+    f.open("D:\\Леха КИСМ\\БМТП\\2 семестр\\Лабы\\Tkachenko-Oleksii-KB222\\lab10\\prj\\output.txt", ios_base::app);
     f << s_calculation(x,y,z) << endl;
     for (int i = 31; i >= 0; i--)
     {
