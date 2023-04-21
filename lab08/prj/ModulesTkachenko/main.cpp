@@ -136,7 +136,10 @@ void function_10_1()
     int random_number;
     srand(time(NULL));
     random_number = rand() % 100 + 10;
-    output << random_number << endl;
+    if (random_number > 100)
+        output << random_number - 10 << endl;
+    else
+        output << random_number << endl;
 
     fstream input;
     input.open("D:\\Ëåõà ÊÈÑÌ\\ÁÌÒÏ\\2 ñåìåñòğ\\Ëàáû\\Tkachenko-Oleksii-KB222\\lab10\\prj\\input.txt", ios_base::in);

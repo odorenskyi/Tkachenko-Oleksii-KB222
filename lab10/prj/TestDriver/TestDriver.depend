@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1682010036 source:c:\users\user\documents\лаб10\testdriver\main.cpp
+	<iostream>
+	<fstream>
+	<ctime>
+	<locale>
+	<math.h>
+
