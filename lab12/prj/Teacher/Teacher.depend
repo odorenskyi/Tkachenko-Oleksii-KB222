@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1683218934 source:c:\users\user\documents\лаб12\teacher\main.cpp
+	<iostream>
+	<fstream>
+	<Windows.h>
+	<Class.h>
+
+1683221841 c:\users\user\documents\лаб12\class.h
+	<iostream>
+	<sstream>
+	<regex>
+
